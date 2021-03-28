@@ -1,5 +1,6 @@
 package pl.schoolmanagementsystem.model;
 
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -8,6 +9,13 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
+@Data
+@Entity
+@NoArgsConstructor
+@EqualsAndHashCode
+@AllArgsConstructor
+@Getter
+@Setter
 public class Teacher implements UserDetails {
 
     @Id

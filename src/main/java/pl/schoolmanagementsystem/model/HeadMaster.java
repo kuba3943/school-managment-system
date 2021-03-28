@@ -1,9 +1,6 @@
 package pl.schoolmanagementsystem.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -16,6 +13,8 @@ import java.util.Collections;
 @NoArgsConstructor
 @EqualsAndHashCode
 @AllArgsConstructor
+@Getter
+@Setter
 public class HeadMaster implements UserDetails {
 
     @Id

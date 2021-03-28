@@ -1,9 +1,6 @@
 package pl.schoolmanagementsystem.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
@@ -13,13 +10,15 @@ import java.util.List;
 @NoArgsConstructor
 @EqualsAndHashCode
 @AllArgsConstructor
+@Getter
+@Setter
 public class Grades {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany
+    @ManyToMany
     private List<Point> points;
 
 }
