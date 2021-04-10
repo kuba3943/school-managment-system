@@ -16,9 +16,9 @@ public class GradeController {
 
     private final GradeService gradeService;
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Grades> get(@PathVariable Long id){
-        return ResponseEntity.ok(gradeService.get(id));
-    }
+//    @GetMapping("/{id}")
+//    public ResponseEntity<Grades> get(@PathVariable Long id){
+//        return ResponseEntity.ok(gradeService.get(id));
+//    }
 
 }

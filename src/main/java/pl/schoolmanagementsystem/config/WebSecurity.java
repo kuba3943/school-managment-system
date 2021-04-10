@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import pl.schoolmanagementsystem.service.StudentService;
+import pl.schoolmanagementsystem.service.TeacherService;
 
 @Configuration
 @RequiredArgsConstructor
@@ -17,6 +18,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
     private final PasswordEncoder passwordEncoder;
 
     private final StudentService studentService;
+    private final TeacherService teacherService;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -35,5 +37,6 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
         auth
                 .userDetailsService(studentService)
                 .passwordEncoder(passwordEncoder);
+
     }
 }

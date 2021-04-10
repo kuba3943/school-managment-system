@@ -1,4 +1,4 @@
-insert into student values (1, '2010-03-02', 'Jakub', 'user', 'Jeden', 'STUDENT', 'kuba' );
+insert into student values (1, '2010-03-02', 'Jakub', '$2y$12$jdEzyzF4KqMnmLqUJP8M.estimnM/k1QmOupzjTfC5AEq52RwNPoK', 'Jeden', 'STUDENT', 'kuba' );
 insert into student values (2, '2010-04-02', 'Tomasz', 'user1', 'Drugi', 'STUDENT', 'tomek' );
 insert into student values (3, '2010-05-02', 'Michał', 'user2', 'Trzeci', 'STUDENT', 'mich' );
 insert into student values (4, '2010-06-02', 'Jan', 'user3', 'Czwarty', 'STUDENT', 'jan' );

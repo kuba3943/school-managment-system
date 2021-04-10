@@ -7,6 +7,8 @@ import pl.schoolmanagementsystem.model.Point;
 import pl.schoolmanagementsystem.model.Student;
 import pl.schoolmanagementsystem.repository.GradesRepository;
 
+import java.util.ArrayList;
+
 @Service
 @AllArgsConstructor
 public class GradeService {
@@ -16,6 +18,14 @@ public class GradeService {
 
     public Grades get(Long id){
         return gradesRepository.findById(id).orElseThrow(() -> new RuntimeException("Could find student"));
+    }
+
+    public Grades delete(Long gradeId, Long pointId){
+        Grades grades = gradesRepository.findById(gradeId).orElseThrow();
+        grades.getPoints().remove(pointService.get(pointId));
+
+        return gradesRepository.save(grades);
+
     }
 
 
@@ -30,8 +40,12 @@ public class GradeService {
         Grades grades = gradesRepository.findById(id).orElseThrow();
         Point point = pointService.get(pointId);
 
-
-        grades.getPoints().add(point);
+        if (grades.getPoints()!=null){
+            grades.getPoints().add(point);
+        } else {
+            grades.setPoints(new ArrayList<>());
+            grades.getPoints().add(point);
+        }
 
         gradesRepository.save(grades);
         return grades;

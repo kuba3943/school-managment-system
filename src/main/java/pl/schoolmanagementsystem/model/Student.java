@@ -3,6 +3,7 @@ package pl.schoolmanagementsystem.model;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import pl.schoolmanagementsystem.validation.PasswordAnnotation;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -24,6 +25,7 @@ public class Student implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @PasswordAnnotation
     private String password;
 
     private String username;
