@@ -30,6 +30,8 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
                 .httpBasic()
                 .and()
                 .csrf().disable();
+
+        http.cors();
     }
 
     @Override
@@ -37,6 +39,5 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
         auth
                 .userDetailsService(studentService)
                 .passwordEncoder(passwordEncoder);
-
     }
 }

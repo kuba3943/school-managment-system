@@ -2,10 +2,8 @@ package pl.schoolmanagementsystem.controllers;
 
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import pl.schoolmanagementsystem.model.SClass;
 import pl.schoolmanagementsystem.model.SchoolSubject;
 import pl.schoolmanagementsystem.service.SubjectService;
 
@@ -19,6 +17,21 @@ public class SubjectController {
     @GetMapping("/{subjectId}")
     public ResponseEntity<SchoolSubject> get(@PathVariable Long subjectId) {
         return ResponseEntity.ok(subjectService.get(subjectId));
+    }
+
+    @PostMapping
+    public ResponseEntity<SchoolSubject> add(@RequestBody SchoolSubject subject) {
+        return ResponseEntity.ok(subjectService.add(subject));
+    }
+
+    @PatchMapping
+    public ResponseEntity<SchoolSubject> update(@RequestBody SchoolSubject subject) {
+        return ResponseEntity.ok(subjectService.update(subject));
+    }
+
+    @DeleteMapping("/{subjectId}")
+    public void delete(@PathVariable Long subjectId) {
+        subjectService.delete(subjectId);
     }
 
 
