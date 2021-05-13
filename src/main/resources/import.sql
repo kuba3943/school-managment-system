@@ -7,7 +7,7 @@ insert into student values (6, '2009-03-02', 'Katarzyna', 'user5', 'Szósta', 'S
 # insert into student values (7, '2009-03-02', 'Maria', 'user6', 'Siódmy', 'STUDENT', 'mary' );
 # insert into student values (8, '2009-03-02', 'Jakub', 'user7', 'Ósmy', 'STUDENT', 'kuba2' );
 
-insert into teacher values (1, 'Piotr', '$2y$12$KjXHnh2NxwXAAfzgopejx.6MS1hj.m6RZ.VeyI4WWWOlIXwyY5IkO', 'Pierwszy', 'TEACHER', 'pete');
+insert into teacher values (1, 'Piotr', '$2y$12$zLOPfoELZXudd/ncfpd0Huhx.LudehKK9N/8JNc0JAGSNALHr6op.', 'Pierwszy', 'TEACHER', 'pete');
 
 insert into sclass values (1, '1A');
 insert into sclass values (2, '2A');

@@ -40,7 +40,7 @@ public class StudentController {
         return ResponseEntity.ok(studentService.getStudentClass(studentId));
     }
 
-    @GetMapping("noClass")
+    @GetMapping("/noClass")
     public ResponseEntity<List<StudentDto>> getStudentsWithNoClass(){
         return ResponseEntity.ok(studentService.getStudentsWithNoClass());
     }
@@ -88,5 +88,10 @@ public class StudentController {
         public ResponseEntity<List<SchoolSubject>> getStudentsSubjects (@PathVariable Long studentId){
             return ResponseEntity.ok(studentService.getStudentsSubject(studentId));
         }
+
+    @GetMapping("/username/{username}")
+    public ResponseEntity<StudentDto> getStudentByUsername(@PathVariable String username) {
+        return ResponseEntity.ok(studentService.findStudentDto(username));
+    }
 
 }

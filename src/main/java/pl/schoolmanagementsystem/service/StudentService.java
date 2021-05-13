@@ -67,6 +67,10 @@ public class StudentService implements UserDetailsService {
         return studentRepository.findStudentByUsername(username);
     }
 
+    public StudentDto findStudentDto(String username){
+        return convertStudentToDto(studentRepository.findStudentByUsername(username).orElseThrow());
+    }
+
 
     public StudentDto addGrade(Long studentId, Long subjectId, Long pointId) {
 
