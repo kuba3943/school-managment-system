@@ -1,4 +1,4 @@
-insert into student values (1, '2010-03-02', 'Jakub', '$2y$12$jdEzyzF4KqMnmLqUJP8M.estimnM/k1QmOupzjTfC5AEq52RwNPoK', 'Jeden', 'STUDENT', 'kuba' );
+insert into student values (1, '2010-03-02', 'Jakub', '$2a$12$xt0hxq6znGobOgAlXNtGAOM5zMB8uYKL7SYQYq4mldyc2XDQFDihi', 'Jeden', 'STUDENT', 'kuba' ); //hasło 1234
 insert into student values (2, '2010-04-02', 'Tomasz', '$2y$12$klr8fuVUwQlC6zWm7rqrPufoDzRnO9cXHjOl3YwSe3rZRiKnxT8NC', 'Drugi', 'STUDENT', 'tomek' );
 insert into student values (3, '2010-05-02', 'Michał', '$2y$12$H6wu/2A5jlCwiNeGavFWkup9CZ1K9jRUJzYF/D6p8OMY9AN2G.qZO', 'Trzeci', 'STUDENT', 'mich' );
 insert into student values (4, '2010-06-02', 'Jan', '$2y$12$SMfXePjRjVCiXx8DDnnt6OsZ3TZIUea52zYplAw3teyu4N9717XbK', 'Czwarty', 'STUDENT', 'jan' );
@@ -7,7 +7,7 @@ insert into student values (6, '2009-03-02', 'Katarzyna', 'user5', 'Szósta', 'S
 # insert into student values (7, '2009-03-02', 'Maria', 'user6', 'Siódmy', 'STUDENT', 'mary' );
 # insert into student values (8, '2009-03-02', 'Jakub', 'user7', 'Ósmy', 'STUDENT', 'kuba2' );
 
-insert into teacher values (1, 'Piotr', '$2y$12$zLOPfoELZXudd/ncfpd0Huhx.LudehKK9N/8JNc0JAGSNALHr6op.', 'Pierwszy', 'TEACHER', 'pete');
+insert into teacher values (1, 'Piotr', '$2a$12$xt0hxq6znGobOgAlXNtGAOM5zMB8uYKL7SYQYq4mldyc2XDQFDihi', 'Pierwszy', 'TEACHER', 'pete'); //haslo 1234
 
 insert into sclass values (1, '1A');
 insert into sclass values (2, '2A');
